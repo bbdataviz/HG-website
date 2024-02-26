@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Area Chart: https://d3js.org/d3-shape/area -->
+<!-- https://onlinetools.com/image/grayscale-image -->
+<head>
+  <meta charset="utf-8">
+  <title>Hyperemesis Gravidarum</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
+</head>
+
+<body>
+  <div class = "snap" >
+    <section>
+        <img src="svg/Title.png" ></img>
+    </section>
+    <section>
+        <img src="svg/E1.png"></img>
+    </section>
+    <section>
+        <img src="svg/E2.png"></img>
+    </section>
+    <section>
+        <img src="svg/E3.png"></img>
+    </section>
+    <section>
+        <img src="svg/E4.png"></img>
+    </section>
+    <section>
+        <img src="svg/E5.png"></img>
+    </section>
+    <section>
+        <img src="svg/E6.png"></img>
+    </section>
+    <section>
+        <img src="svg/definition.png"></img>
+    </section>
+    <section>
+        <img src="svg/explainHG-path1.svg"></img>
+    </section>
+    <section>
+        <img src="svg/explainHG-path2.svg"></img>
+    </section>
+    <section>
+        <img src="svg/Intro.png"></img>
+    </section>
+    <section>
+      <img src="svg/data.png"></img>
+    </section>
+   
+    <section class="section-dataviz">
+      <div class="leftcolumn">
+        <div class="griditem"></div>
+        <div>
+          <img src="svg/HG.png" style="margin-top: 4%; margin-left: 4%"></img>
+        </div>
+        <div class="griditem"></div>
+        <div class="griditem"> 
+            <svg id="svgypos1" width="750" height="500" style="margin-top:-5%;">
+              <defs>
+                <linearGradient id="gradient01">
+                  <stop offset="00%" stop-color="#0022ff85" />
+                  <stop offset="50%" stop-color="#0022ff80" />
+                  <stop offset="60%" stop-color="#0022ff22" />
+                  <stop offset="70%" stop-color="#0022ff00" />
+                </linearGradient>
+             </defs>
+            </svg>
+        </div>
+
+        <div class="griditem"></div>
+        <div class="griditem"> 
+          <img src="svg/icons-pregnancy-stages.svg" width="600" height="190" style="margin-top: -220px; margin-right:30px"></img>
+        </div>
+        
+        <div class="griditem"></div>
+        <div class="griditem"> 
+            <svg id="svgyposneg1" width="750" height="500" style="margin-top: -80px;"></svg>
+        </div>
+
+        <div class="griditem"></div>
+        <div class="griditem">
+          <div id="face-depress" width="50" height="50">
+            <img src="svg/Depress.png" width="50" height="50"></img>
+            <span class="tooltipbox">
+              <table>
+                <tr>
+                    <td><img src="svg/Depress-tool.png" width="200" height="200"></td>
+                    <td>
+                        <div class = "depress">Depression</div>
+                        <div class = "quote"> “I constantly told the doctors at the hospital that I couldn't bear it anymore.” </div>
+                    </td>
+                </tr>
+              </table> 
+           </span>
+          </div>
+
+          <div id="face-sleep" width="50" height="50">
+            <img src="svg/Sleep.png" width="50" height="50"></img>
+            <span class="tooltipbox">
+              <table>
+                <tr>
+                    <td><img src="svg/Sleep-tool.png" width="200" height="200"></td>
+                    <td>
+                        <div class = "sleep">Sleeping Problems</div>
+                        <div class = "quote"> “My vomiting was so severe that I barely 
+                          slept at night and constantly had my head in the toilet or a bucket.” </div>
+                    </td>
+                </tr>
+              </table> 
+           </span>
+          </div>
+
+          <div id="face-headache" width="50" height="50">
+            <img src="svg/Headache.png" width="50" height="50"></img>
+            <span class="tooltipbox">
+              <table>
+                <tr>
+                    <td><img src="svg/Headache-tool.png" width="200" height="200"></td>
+                    <td>
+                        <div class = "hedache">Headache</div>
+                        <div class = "quote"> “I was in so much pain” </div>
+                    </td>
+                </tr>
+              </table> 
+           </span>
+          </div>
+      
+          <div id="face-fatigue"width="50" height="50">
+            <img src="svg/Fatigue.png" width="50" height="50"></img>
+            <span class="tooltipbox">
+              <table>
+                <tr>
+                    <td><img src="svg/Fatigue-tool.png" width="200" height="200"></td>
+                    <td>
+                        <div class = "fatigue">Unusual Fatigue/Drowsiness</div>
+                        <div class = "quote"> “(...) needing to constantly visit 
+                          the hospital for being so weak that I would faint, 
+                          not be able to eat, or fall over from dizzines, (…)” </div>
+                    </td>
+              </table> 
+           </span>
+          </div>
+        </div>
+
+        <!-- -->
+        
+        
+        <!-- -->
+      </div>
+
+      <div class="rightcolumn">
+        <div>
+          <img src="svg/NoHG.png" style="margin-top: 4%; margin-left: 4%"></img>
+        </div>
+        <div class="griditem"></div>
+        <div class="griditem"> 
+            <svg id="svgypos2" width="750" height="500" style="margin-top:-5%;"></svg></div>
+        <div class="griditem"></div>
+        <div class="griditem"> 
+          <img src="svg/icons-pregnancy-stages.svg" width="600" height="190" style="margin-top: -220px; margin-right:30px"></img>
+        </div>
+        <div class="griditem"></div>
+        <div class="griditem"> 
+            <svg id="svgyposneg2" width="750" height="500" style="margin-top: -80px">  
+            </svg>
+        </div>
+        <div class="griditem" style="margin-bottom: -80px"></div>
+      </div>
+    </section>
+
+    <section>
+      <img src="svg/end1.png" ></img>
+    </section>
+    <section>
+      <img src="svg/end2.png"></img>
+    </section>
+  </div>    
+  
+</body>
+
+</html>
+
+
+<!-- <script src="NVpos1.js"></script> -->
+<script src="NVpos1.js"></script>
+<script src="NVposneg1.js"></script>
+<script src="NVneg1.js"></script>
+<script src="noNVpos2.js"></script>
+<script src="noNVposneg2.js"></script>
+
+</html>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
