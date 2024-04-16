@@ -1,28 +1,107 @@
-* {
-    margin: 0;
-    padding: 0;
-    /*box-sizing: border-box;*/
-    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+@font-face {
+    font-family: 'greatthings';
+    src: url('font/greatthings/goingtodogreatthings-webfont.woff2') format('woff2'),
+         url('font/greatthings/goingtodogreatthings-webfont.woff') format('woff'),
+         url('font/greatthings/goingtodogreatthings-webfont.ttf') format('truetype'),
+         url('font/greatthings/goingtodogreatthings-webfont.svg#goingtodogreatthingsmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-    font-family: goingtodogreatthings;
-    src: url(font/goingtodogreatthings.ttf);
+    font-family: 'ink_freeregular';
+    src: url('font/inkfreeweb/inkfree-webfont.eot');
+    src: url('font/inkfreeweb/inkfree-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/inkfreeweb/inkfree-webfont.woff2') format('woff2'),
+         url('font/inkfreeweb/inkfree-webfont.woff') format('woff'),
+         url('font/inkfreeweb/inkfree-webfont.ttf') format('truetype'),
+         url('font/inkfreeweb/inkfree-webfont.svg#ink_freeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
+
+* {
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    /*box-sizing: border-box;*/
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+}
+body {
+    font-family: 'ink_freeregular';
+    color: #330a39ff;
+    /*font-family: 'Courier New', Courier, monospace;*/
+  }
+
 .snap {
+    height: 100vh;
+    width: 100vw;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
 }
 
 section {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start; 
-    background-color: rgb(233,214,251);
+    height: 100vh;
+    width: 100vw;
+    /*margin-top: 90px;*/
+    scroll-snap-align: start;
+    text-align: center;    
+    display: inline-block;
+    /*background-color: rgb(233,214,251);*/
+}
+
+.intro-img {
+    height: 70vh; /* window height */
+    width: 80vw;
+    padding: 1vh 2vw 2vh 2vw;
+}
+.explain-img {
+    height: 84vh; /* window height */
+    margin: 4vh 0vw 0vh 3vw;
+}
+
+svg path {
+    animation: pathAnim 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+@keyframes pathAnim {
+    0%{
+        d: path("M0,192 C220, 100, 440, 100, 660, 192, C880, 290, 1100, 290, 1320, 192 L1320 500 L0 500")
+    }
+    25%{
+        d: path("M0,100 C220, 100, 440, 292, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    50%{
+        d: path("M0,192 C220, 290, 440, 290, 660, 192, C880, 100, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    25%{
+        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    100%{
+        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+}
+
+.intro1 {
+    font-size: 4.5em;
+    padding-top: 4vh;
+}
+.intro2 {
+    font-size: 4.5em;
+    margin-top: -2vh;
+}
+.explain_txt {
+    margin: 10%;
+    margin-left: 30%;
+    font-family: goingtodogreatthings, 'Segoe UI';
+    color: rgb(77, 77, 77);
 }
 .acktxt {
     width: 100vw;
@@ -33,21 +112,22 @@ section {
     align-items: center;
     text-align: center;
 
-    font-size: 5em;
-    scroll-snap-align: start; 
+    font-size: 2.5em;
+    
     background-color: rgb(233,214,251);
-    font-family: goingtodogreatthings, 'Segoe UI';
-    color: rgb(66,33,11);
-    /*border-style: dotted;*/
+    font-family: 'Segoe UI'; 
+    font-style: light;
+
+    background-image: linear-gradient(180deg, #ffebff, #efc6f5);
 }
 .acktxt1 {
-    padding-top: 90%;
+    /*padding-top: 90%;*/
     padding-left: 10%;
     padding-right: 10%; 
     font-size: 0.8em;
 }
 .acktxt2 {
-    padding-bottom: 90%;
+    /*padding-bottom: 90%;*/
     font-size: 0.9em; 
 }
 .link {
@@ -111,7 +191,9 @@ section {
     display: inline-block;
     top: -550%; left: -25%;
   }
-  
+  .headache {
+    color: black;
+  }
  
 #face-sleep .tooltipbox {
     visibility: hidden;
