@@ -31,7 +31,6 @@
 }
 body {
     font-family: 'ink_freeregular';
-    color: #330a39ff;
     /*font-family: 'Courier New', Courier, monospace;*/
   }
 
@@ -104,21 +103,17 @@ svg path {
     color: rgb(77, 77, 77);
 }
 .acktxt {
-    width: 100vw;
+    width: 84vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 3.5em;
+    margin-top: -30vh;
+    padding: 0vh 15vh 10vh 15vh;
 
-    font-size: 2.5em;
-    
-    background-color: rgb(233,214,251);
-    font-family: 'Segoe UI'; 
-    font-style: light;
-
-    background-image: linear-gradient(180deg, #ffebff, #efc6f5);
 }
 .acktxt1 {
     /*padding-top: 90%;*/
