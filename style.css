@@ -59,48 +59,22 @@ section {
     width: 80vw;
     padding: 1vh 2vw 2vh 2vw;
 }
-.explain-img {
-    height: 84vh; /* window height */
-    margin: 4vh 0vw 0vh 3vw;
-}
-
-svg path {
-    animation: pathAnim 7s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    z-index: 1;
-}
-@keyframes pathAnim {
-    0%{
-        d: path("M0,192 C220, 100, 440, 100, 660, 192, C880, 290, 1100, 290, 1320, 192 L1320 500 L0 500")
-    }
-    25%{
-        d: path("M0,100 C220, 100, 440, 292, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
-    }
-    50%{
-        d: path("M0,192 C220, 290, 440, 290, 660, 192, C880, 100, 1100, 100, 1320, 192 L1320 500 L0 500")
-    }
-    25%{
-        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
-    }
-    100%{
-        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
-    }
-}
 
 .intro1 {
-    font-size: 4.5em;
+    font-size: 7vh;
     padding-top: 4vh;
 }
 .intro2 {
-    font-size: 4.5em;
+    font-size: 7vh;
     margin-top: -2vh;
 }
+
+.explain-img {
+    height: 70vh; /* window height */
+    margin: 1vh 2vw 4vh 2vw;;
+}
 .explain_txt {
-    margin: 10%;
-    margin-left: 30%;
-    font-family: goingtodogreatthings, 'Segoe UI';
-    color: rgb(77, 77, 77);
+    color: #4d4d4d;
 }
 .acktxt {
     width: 84vw;
@@ -324,3 +298,29 @@ svg path {
 #seperatershort {
     padding-top: 20px;
 }
+
+/*
+svg path {
+    animation: pathAnim 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+@keyframes pathAnim {
+    0%{
+        d: path("M0,192 C220, 100, 440, 100, 660, 192, C880, 290, 1100, 290, 1320, 192 L1320 500 L0 500")
+    }
+    25%{
+        d: path("M0,100 C220, 100, 440, 292, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    50%{
+        d: path("M0,192 C220, 290, 440, 290, 660, 192, C880, 100, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    25%{
+        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    100%{
+        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+}
+*/
