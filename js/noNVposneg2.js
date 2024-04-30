@@ -1,4 +1,4 @@
-var svg22 = d3.select("#svgposneg2"),
+var svg22 = d3.select("#svgyposneg2"),
       margin = {top: 50, right: 90, bottom: 30, left: 50},
       width = +svg22.attr("width") - margin.left - margin.right,
       height = +svg22.attr("height") - margin.top - margin.bottom,
