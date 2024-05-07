@@ -5,7 +5,7 @@
    viewBox="0 0 1920 1080"
    version="1.1"
    id="svg8"
-   sodipodi:docname="intro-DV.svg"
+   sodipodi:docname="intro-DV-organge.svg"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -69,7 +69,7 @@
        x1="886.34894"
        y1="287.44101"
        y2="287.44101"
-       style="stroke-width:2.09484;stroke-dasharray:none;fill:#dfe5dd;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
+       style="stroke-width:2.09484;stroke-dasharray:none" />
     <text
        id="text18"
        data-name="Unusual Fatigue/Drowsiness "
@@ -105,7 +105,7 @@
        transform="translate(-534.189,-7187.157)"
        fill="rgba(255,255,0,0.8)"
        opacity="0.8"
-       style="fill:#dfe52f;fill-opacity:1;opacity:1" />
+       style="fill:#ff794b;fill-opacity:0.66666669;opacity:1" />
     <path
        id="Pfad_1343"
        data-name="Pfad 1343"
@@ -326,7 +326,7 @@
        data-name="Pfad 1394"
        d="m 966.503,478.8 -33.584,48.381 21.6,-4.2 -5.446,41 31.164,-58.9 -22.147,4.728 z"
        fill="#dfe54e"
-       style="stroke:#878787;stroke-opacity:1;stroke-width:1.2;stroke-dasharray:none" />
+       style="stroke:#878787;stroke-opacity:1;stroke-width:1.2;stroke-dasharray:none;fill:#ff794b;fill-opacity:0.86666667" />
     <text
        id="Headache_"
        data-name="Headache "
