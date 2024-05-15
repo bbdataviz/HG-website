@@ -22,7 +22,9 @@
 
 }
 
-
+img {
+    /*border: 1px solid red;*/
+}
 * {
     margin: 0;
     scroll-snap-type: y mandatory;
@@ -70,8 +72,8 @@ section {
 }
 
 .explain-img {
-    height: 80vh; /* window height */
-    padding: 5vh 2vw 3vh 9vw;
+    height: 90vh; /* window height */
+    padding: 0vh 2vw 3vh 9vw;
     float: left;
     /*border: 1px solid red;*/
     
@@ -183,126 +185,6 @@ section {
 }
 */
   /* quote design */
-  
-  #face-depress {
-    position: relative;
-    display: inline-block;
-    top: -750%; left: 15%;
-  }
-  #face-sleep {
-    position: relative;
-    display: inline-block;
-    top: -730%; left: -20%; 
-  }
-  #face-headache {
-    position: relative;
-    display: inline-block;
-    top: -680%; left: 10%;
-  }
-  #face-fatigue {
-    position: relative;
-    display: inline-block;
-    top: -500%; left: 2%;
-    font-size: 1em;
-  }
- 
-#face-sleep .tooltipbox {
-    visibility: hidden;
-    height: flex;
-    /*height: 430px;*/
-    width: 450px;
-    background-color: rgb(248, 255, 255);
-    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
-    box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
-    padding: 15px;
-    position: absolute;
-    z-index: 2; /*obere Ebene*/
-    bottom: 93%;
-    left: 90%;
-    margin-left: 0px;
-    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
-#face-depress .tooltipbox {
-    visibility: hidden;
-    height: flex;
-    /*height: 430px;*/
-    width: 450px;
-    background-color: rgb(248, 255, 255);
-    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
-    box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
-    padding: 15px;
-    position: absolute;
-    z-index: 2; /*obere Ebene*/
-    bottom: -90%;
-    left: 50%;
-    margin-left: 0px;
-    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
-#face-headache .tooltipbox {
-    visibility: hidden;
-    height: flex;
-    /*height: 430px;*/
-    width: 450px;
-    background-color: rgb(248, 255, 255);
-    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
-    box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
-    padding: 15px;
-    position: absolute;
-    z-index: 2; /*obere Ebene*/
-    bottom: -90%;
-    left: 50%;
-    margin-left: 0px;
-    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-#face-fatigue .tooltipbox {
-    visibility: hidden;
-    height: flex;
-    /*height: 430px;*/
-    width: 450px;
-    background-color: rgb(248, 255, 255);
-    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
-    box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
-    padding: 15px;
-    position: absolute;
-    z-index: 2; /*obere Ebene*/
-    bottom: -90%;
-    left: 50%;
-    margin-left: 0px;
-    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
-#face-fatigue:hover .tooltipbox {
-    visibility: visible;
-    opacity: 0.9;
-}
-#face-sleep:hover .tooltipbox {
-    visibility: visible;
-    opacity: 0.9;
-}
-#face-headache:hover .tooltipbox {
-    visibility: visible;
-    opacity: 0.9;
-}
-#face-depress:hover .tooltipbox {
-    visibility: visible;
-    opacity: 0.9;
-}
 .fatigue {
     color: #92a2c3;
     font-style: bold;
@@ -333,6 +215,174 @@ section {
     font-style: bold;
     font-size: 1.6em;
 }
+  
+  #face-depress {
+    position: relative;
+    display: inline-block;
+    top: -750%; left: 15%;
+    animation: svg-shadow_d 1.5s ease-in-out infinite alternate;
+    z-index: 1; 
+  }
+  #face-sleep {
+    position: relative;
+    display: inline-block;
+    top: -730%; left: -20%; 
+    animation: svg-shadow_s 1.5s ease-in-out infinite alternate;
+    z-index: 2; 
+  }
+  #face-headache {
+    position: relative;
+    display: inline-block;
+    top: -680%; left: 10%;
+    animation: svg-shadow_h 1.5s ease-in-out infinite alternate;
+    z-index: 3; 
+  }
+  #face-fatigue {
+    position: relative;
+    display: inline-block;
+    top: -500%; left: 2%;
+    font-size: 1em;
+    animation: svg-shadow_f 1.5s ease-in-out infinite alternate;
+    z-index: 4; 
+  }
+
+  
+  @keyframes svg-shadow_f {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #69f9fc) drop-shadow( 0 0 4px #69f9fc);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 4px #fff) drop-shadow( 0 0 3px #69f9fc) drop-shadow( 0 0 1px #69f9fc);
+    }
+  }
+
+  @keyframes svg-shadow_h {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #ff926e) drop-shadow( 0 0 3px #ff926e);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 3px #fff) drop-shadow( 0 0 2px #ff926e) drop-shadow( 0 0 1px #ff926e);
+    }
+  }
+
+  @keyframes svg-shadow_s {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #4b63fc) drop-shadow( 0 0 3px #4b63fc);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 3px #fff) drop-shadow( 0 0 2px #4b63fc) drop-shadow( 0 0 1px #4b63fc);
+    }
+  }
+
+  @keyframes svg-shadow_d {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #5d5d5d) drop-shadow( 0 0 3px #5d5d5d);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 3px #fff) drop-shadow( 0 0 2px #5d5d5d) drop-shadow( 0 0 1px #5d5d5d);
+    }
+  }
+ 
+#face-sleep .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    padding: 15px;
+    position: absolute;
+    bottom: 93%;
+    left: 90%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+    
+}
+#face-depress .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    padding: 15px;
+    position: absolute;
+    bottom: -90%;
+    left: 50%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+#face-headache .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    padding: 15px;
+    position: absolute;
+    bottom: -90%;
+    left: 50%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#face-fatigue .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    padding: 15px;
+    position: absolute;
+    bottom: -90%;
+    left: 50%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+#face-fatigue:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+}
+#face-sleep:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+    animation: none;
+}
+#face-headache:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+}
+#face-depress:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+}
+
 .quote {
     font-style: italic;
     font-size: 1.35em;
