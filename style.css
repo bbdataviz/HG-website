@@ -272,32 +272,27 @@ body {
 .fatigue {
     color: #92a2c3;
     font-style: bold;
-    font-size: 1.6em;
+    font-size: 1.9em;
 }
 .sleep {
     color: #0022ff;
     font-style: bold;
-    font-size: 1.6em;
+    font-size: 1.9em;
 }
 .headache {
     color: #ff794b;
     font-style: bold;
-    font-size: 1.6em;
+    font-size: 1.9em;
 }
 .depress {
     color: #000;
     font-style: bold;
-    font-size: 1.6em;
-}
-.NV {
-    color: #0022ff;
-    font-style: bold;
-    font-size: 1.6em;
+    font-size: 1.9em;
 }
 .hospital {
     color: #FF000088;
     font-style: bold;
-    font-size: 1.6em;
+    font-size: 1.9em;
 }
 
 #face-fatigue {
@@ -384,15 +379,14 @@ z-index: 2;
     border-radius: 4px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
-    padding: 15px;
+    padding: 20px;
     position: absolute;
-    bottom: 93%;
+    bottom: 50px;
     left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
-    
 }
 #face-depress .tooltipbox {
     visibility: hidden;
@@ -404,10 +398,10 @@ z-index: 2;
     border-radius: 4px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
-    padding: 15px;
+    padding: 20px;
     position: absolute;
-    bottom: -90%;
-    left: 50%;
+    bottom: 50px;
+    left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
@@ -423,10 +417,10 @@ z-index: 2;
     border-radius: 4px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
-    padding: 15px;
     position: absolute;
-    bottom: -90%;
-    left: 50%;
+    padding: 20px;
+    bottom: 50px;
+    left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
@@ -443,10 +437,10 @@ z-index: 2;
     border-radius: 4px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
-    padding: 15px;
     position: absolute;
-    bottom: -90%;
-    left: 50%;
+    padding: 20px;
+    bottom: 50px;
+    left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
