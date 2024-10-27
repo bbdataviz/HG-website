@@ -180,6 +180,7 @@ body {
     padding-top: 30px;
     display: grid;
     grid-template-columns: 90% 10%;
+    grid-template-rows: 500px 500px 100px;
     background-color: #fbedfd;
     }
 .dataviz {
@@ -490,6 +491,13 @@ z-index: 2;
     margin-top: 20px; 
     margin-left: 1vw; 
     margin-right: -150px; 
+    text-align: left
+}
+.annotation_side_symptoms_right {
+    font-size: 1.6em; 
+    margin-top: 20px; 
+    margin-left: -100px; 
+    margin-right: 0px; 
     text-align: left
 }
 .annotation_left {
