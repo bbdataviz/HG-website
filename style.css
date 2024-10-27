@@ -1,0 +1,557 @@
+/* Font Embedding */
+@font-face {
+    font-family: 'greatthings';
+    src: url('font/greatthings/goingtodogreatthings-webfont.woff2') format('woff2'),
+         url('font/greatthings/goingtodogreatthings-webfont.woff') format('woff'),
+         url('font/greatthings/goingtodogreatthings-webfont.ttf') format('truetype'),
+         url('font/greatthings/goingtodogreatthings-webfont.svg#goingtodogreatthingsmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'ink_freeregular';
+    src: url('font/inkfreeweb/inkfree-webfont.eot');
+    src: url('font/inkfreeweb/inkfree-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/inkfreeweb/inkfree-webfont.woff2') format('woff2'),
+         url('font/inkfreeweb/inkfree-webfont.woff') format('woff'),
+         url('font/inkfreeweb/inkfree-webfont.ttf') format('truetype'),
+         url('font/inkfreeweb/inkfree-webfont.svg#ink_freeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+* {
+    margin: 0px;
+    }
+body {
+    font-family: 'ink_freeregular';
+    overflow: hidden; /* removes the scrollbar at each section */
+    }
+
+/* Snap Layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts */
+.snap {
+    /* has to have a defined size */
+    height: 100vh;
+    width: 100vw;
+    /* enable overflow */
+    overflow-y: scroll; /* scrollbar for the whole page */
+    overflow-x: hidden; /* removes the scrollbar at x axis */
+    /* define scroll snapping on the scroll container by using the following two key properties */
+    scroll-snap-type: y mandatory; /* keyword tells the browser whether the content has to snap to a certain point, no matter where the scroll is*/
+    }
+.snap .child {
+    scroll-snap-align: start; /* property is set on every child of the scroll container*/
+    overflow: hidden;
+    height: 100vh !important;
+    width: 100vw !important;
+    margin: -6px 0 0px 0; 
+    
+    justify-content: center;
+    align-items: center;   
+    text-align: center;    
+    display: inline-block;
+    }
+
+.intro-img {
+    height: 70vh; /* 70% of window height */
+    /* width: 80vw; */
+    padding: 1vh 2vw 2vh 2vw;
+    /*border: 1px solid #f87676;*/
+    }
+
+/* Example of inheritance for fonts */
+.parent-font .child-font {
+    color: red; /* overwrite color to red */
+    font-size: 8vh; /* overwrite font size */
+    }
+.parent-font {
+    color: blue; font-size: 6vh; font-style: italic; /* italic is inherited*/
+    }
+/* <div class="parent-font"> <p class="child-font"> This is text. </p> </div> */
+
+.intro1 {
+    font-size: 6.5vh;
+    padding-top: 4vh;
+    /*border: 1px solid #f87676;*/
+    }
+.intro2 {
+    font-size: 6.5vh;
+    margin-top: -2vh;
+    /*border: 1px solid #f87676;*/
+    }
+.intro2 .intro2-2 {
+    color: white; 
+    position: relative; /* needed for layering */
+    z-index: 1;
+    /*border: 1px solid #f87676;*/
+    }
+
+.wave {
+    position: sticky; 
+    z-index: 0; 
+    margin-top: -15vh; 
+    width: 100vw;
+    }
+
+.explain-img {
+    height: 90vh; /* window height */
+    padding: 0vh 0vw 3vh 9vw;
+    float: left;
+    /*border: 1px solid red;*/
+    }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+.explain-txt {
+    color: #4d4d4d;
+    text-align: left;
+    font-size: 4vh;
+    padding: 20vh 13vw 0 0vw;
+    }
+.nausea {
+    color: #00d023;
+    }
+.blood {
+    color:rgb(206, 19, 19);
+    }
+.placenta {
+    color: rgb(186, 27, 109);
+    }
+.annotation {
+    text-align: left;
+    font-size: 1.5em;
+    width: 150px;
+    margin-right: -150px;
+    padding-left: 20px;
+    padding-top: 20px;
+    }
+.link {
+    color: rgb(84, 0, 162);
+    text-decoration: none;
+    /*text-underline-offset: 12px; */
+    }
+.link:hover {
+    color: rgb(162, 0, 103);
+    text-decoration: none;
+}
+
+/* dataviz section*/
+.section-dataviz {
+    scroll-snap-align: start; /* important for not overscroll sections */
+    width: 100vw;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    color: #222;
+    }
+.leftcolumn {
+    width: 50vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 90%;  /* auto for each column */
+    grid-template-rows: 150px 70% 15%;
+    background-color: #f0e5f9;
+    }
+.rightcolumn {
+    width: 50vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 150px 70% 15%;
+    background-color: #fbedfd;
+    }
+.leftcolumn2 {
+    width: 50vw;
+    height: 100vh;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 10% 90%; /* auto for each column */
+    grid-template-rows: 500px 500px 100px;
+    background-color: #f0e5f9;
+}
+.rightcolumn2 {
+    width: 50vw;
+    height: 100vh;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 500px 500px 100px;
+    background-color: #fbedfd;
+    }
+.dataviz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.griditem {
+    padding: 0;
+    margin: 0px;
+    text-align: center;
+    /*
+    border: 1px solid red;
+    */
+    }
+.img-stages {
+    width: 580px;
+    margin-right: -20px;
+    transform: rotate(-0.5deg);
+    /*border: 1px solid #4b2aa7;*/
+    }
+.img-stages2 {
+    width: 580px;
+    margin-top: -1000px;
+    opacity: 0.8;
+    margin-right: -20px;
+    transform: rotate(-0.5deg);
+    /*border: 1px solid #4b2aa7;*/
+    }
+
+
+.datavis_descript {
+    width: 37vw;
+    text-align: left;
+    font-size: 4vh;
+    padding: 20% 0% 2% 5%;
+    /*border: 1px solid rgb(255, 0, 255);*/
+    }
+.datavis_descript_2 {
+    width: 37vw;
+    text-align: left;
+    font-size: 4vh;
+    padding: 2% 0% 2% 5%;
+    /*border: 1px solid rgb(255, 0, 255);*/
+    }
+.datavis_descript_below {
+    text-align: left;
+    font-size: 4vh;
+    margin-top: -65px;
+    padding: 0% 10% 1% 5%;
+    /*border: 1px solid rgb(0, 247, 255);*/
+    }
+.datavis_descript_small {
+    text-align: left;
+    font-size: 3vh;
+    padding: 1% 20% 1% 5%;
+    }
+.underliner {
+    text-decoration: underline;
+    text-underline-offset: 10px; /* move to bottom */
+    }
+
+.zoom-button {
+    font-size: 1.8em;
+    font-family: 'ink_freeregular';
+    padding: 3px 13px 0px 13px;
+    margin-top: 15px;
+    border-radius: 0.3em;
+    border-color: #dd4400ff;
+    background-color: #fbedfd;
+    }
+.zoom-button:hover {
+    background-color: #fff;
+    border-color: #dd0000ff;
+    }
+        
+  /*
+  .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    /*
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+*/
+  /* quote design */
+.fatigue {
+    color: #92a2c3;
+    font-style: bold;
+    font-size: 1.9em;
+}
+.sleep {
+    color: #0022ff;
+    font-style: bold;
+    font-size: 1.9em;
+}
+.headache {
+    color: #ff794b;
+    font-style: bold;
+    font-size: 1.9em;
+}
+.depress {
+    color: #000;
+    font-style: bold;
+    font-size: 1.9em;
+}
+.hospital {
+    color: #FF000088;
+    font-style: bold;
+    font-size: 1.9em;
+}
+
+#face-fatigue {
+    position: relative;
+    display: inline-block;
+    top: -380px; left: -120px;
+    font-size: 1em;
+    animation: svg-shadow_f 1.5s ease-in-out infinite alternate;
+    z-index: 4; 
+}
+#face-headache {
+    position: relative;
+    display: inline-block;
+    top: -515px; left: 0px;
+    animation: svg-shadow_h 1.5s ease-in-out infinite alternate;
+    z-index: 3; 
+}
+
+#face-depress {
+position: relative;
+display: inline-block;
+top: -750%; left: 13%;
+animation: svg-shadow_d 1.5s ease-in-out infinite alternate;
+z-index: 1; 
+}
+#face-sleep {
+position: relative;
+display: inline-block;
+top: -730%; left: -20%; 
+animation: svg-shadow_s 1.5s ease-in-out infinite alternate;
+z-index: 2; 
+}
+
+
+
+  
+  @keyframes svg-shadow_f {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #69f9fc) drop-shadow( 0 0 4px #69f9fc);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 4px #fff) drop-shadow( 0 0 3px #69f9fc) drop-shadow( 0 0 1px #69f9fc);
+    }
+  }
+
+  @keyframes svg-shadow_h {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #ff926e) drop-shadow( 0 0 3px #ff926e);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 3px #fff) drop-shadow( 0 0 2px #ff926e) drop-shadow( 0 0 1px #ff926e);
+    }
+  }
+
+  @keyframes svg-shadow_s {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #4b63fc) drop-shadow( 0 0 3px #4b63fc);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 3px #fff) drop-shadow( 0 0 2px #4b63fc) drop-shadow( 0 0 1px #4b63fc);
+    }
+  }
+
+  @keyframes svg-shadow_d {
+    from {
+      filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #5d5d5d) drop-shadow( 0 0 3px #5d5d5d);
+    }
+  
+    to {
+      filter: drop-shadow( 0 0 3px #fff) drop-shadow( 0 0 2px #5d5d5d) drop-shadow( 0 0 1px #5d5d5d);
+    }
+  }
+ 
+#face-sleep .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 90%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+#face-depress .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 90%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+#face-headache .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    position: absolute;
+    padding: 20px;
+    bottom: 50px;
+    left: 90%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#face-fatigue .tooltipbox {
+    visibility: hidden;
+    height: flex;
+    /*height: 430px;*/
+    width: 450px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
+    border-radius: 4px;
+    /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
+    text-align: left;
+    position: absolute;
+    padding: 20px;
+    bottom: 50px;
+    left: 90%;
+    margin-left: 0px;
+    /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+#face-fatigue:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+}
+#face-sleep:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+    animation: none;
+}
+#face-headache:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+}
+#face-depress:hover .tooltipbox {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.35em;
+}
+#seperatershort {
+    padding-top: 20px;
+}
+.annotation_all_women{
+    font-size: 1.7em; 
+    margin-top: 60px; 
+    margin-left: 1vw; 
+    margin-right: -150px; 
+    text-align: left
+}
+.annotation_side_symptoms {
+    font-size: 1.6em; 
+    margin-top: 10px; 
+    margin-left: 1vw; 
+    margin-right: -150px; 
+    text-align: left
+}
+.annotation_side_symptoms_right {
+    font-size: 1.6em; 
+    margin-top: 10px; 
+    margin-left: -100px; 
+    margin-right: -0px; 
+    text-align: left
+}
+.annotation_left {
+    width: 50px;
+}
+.annotation_right {
+    width: 75px;
+}
+.acktxt {
+    width: 84vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3.5em;
+    margin-top: -30vh;
+    padding: 0vh 15vh 10vh 15vh;
+}
+.acktxt1 {
+    /*padding-top: 90%;*/
+    padding-left: 10%;
+    padding-right: 10%; 
+    font-size: 0.8em;
+}
+.acktxt2 {
+    /*padding-bottom: 90%;*/
+    font-size: 0.9em; 
+}
+
+
+/*
+svg path {
+    animation: pathAnim 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+@keyframes pathAnim {
+    0%{
+        d: path("M0,192 C220, 100, 440, 100, 660, 192, C880, 290, 1100, 290, 1320, 192 L1320 500 L0 500")
+    }
+    25%{
+        d: path("M0,100 C220, 100, 440, 292, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    50%{
+        d: path("M0,192 C220, 290, 440, 290, 660, 192, C880, 100, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    25%{
+        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+    100%{
+        d: path("M0,292 C220, 292, 440, 100, 660, 292, C880, 292, 1100, 100, 1320, 192 L1320 500 L0 500")
+    }
+}
+*/
