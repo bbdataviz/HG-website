@@ -23,7 +23,8 @@
 
 * {
     margin: 0px;
-    }
+}
+
 body {
     font-family: 'ink_freeregular';
     overflow: hidden; /* removes the scrollbar at each section */
@@ -54,9 +55,9 @@ body {
     }
 
 .intro-img {
-    height: 70vh; /* 70% of window height */
-    /* width: 80vw; */
-    padding: 1vh 2vw 2vh 2vw;
+    height: 65vh; 
+    width: 70vw; 
+    padding: 2vh 2vw 3vh 2vw;
     /*border: 1px solid #f87676;*/
     }
 
@@ -71,17 +72,18 @@ body {
 /* <div class="parent-font"> <p class="child-font"> This is text. </p> </div> */
 
 .intro1 {
-    font-size: 6.5vh;
+    font-size: 3.5vw;
     padding-top: 4vh;
+    color: #fff;
     /*border: 1px solid #f87676;*/
     }
 .intro2 {
-    font-size: 6.5vh;
-    margin-top: -2vh;
+    font-size: 3.5vw;
+    color: #fff;
     /*border: 1px solid #f87676;*/
     }
 .intro2 .intro2-2 {
-    color: white; 
+    color: #fff; 
     position: relative; /* needed for layering */
     z-index: 1;
     /*border: 1px solid #f87676;*/
@@ -90,7 +92,7 @@ body {
 .wave {
     position: sticky; 
     z-index: 0; 
-    margin-top: -15vh; 
+    margin-top: -16vh; 
     width: 100vw;
     }
 
@@ -115,26 +117,26 @@ body {
     color: #00d023;
     }
 .blood {
-    color:rgb(206, 19, 19);
+    color:#ce1313;
     }
 .placenta {
-    color: rgb(186, 27, 109);
+    color: #ba1b6d;
     }
 .annotation {
     text-align: left;
     font-size: 1.5em;
     width: 150px;
-    margin-right: -150px;
+    margin: -150px;
     padding-left: 20px;
     padding-top: 20px;
     }
 .link {
-    color: rgb(84, 0, 162);
+    color: #5400a2;
     text-decoration: none;
     /*text-underline-offset: 12px; */
     }
 .link:hover {
-    color: rgb(162, 0, 103);
+    color: #a20067;
     text-decoration: none;
 }
 
@@ -154,7 +156,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 10% 90%;  /* auto for each column */
-    grid-template-rows: 150px 70% 15%;
+    grid-template-rows: 150px 600px 100px;
     background-color: #f0e5f9;
     }
 .rightcolumn {
@@ -164,31 +166,92 @@ body {
     grid-template-columns: 90% 10%;
     grid-template-rows: 150px 70% 15%;
     background-color: #fbedfd;
+    position: relative;
+    z-index: 2;
     }
 .leftcolumn2 {
     width: 50vw;
     height: 100vh;
-    padding-top: 30px;
     display: grid;
-    grid-template-columns: 10% 90%; /* auto for each column */
-    grid-template-rows: 500px 500px 100px;
+    row-gap: 25px;
+    grid-template-columns: 120px 800px; /* auto for each column */
+    grid-template-rows: 400px 400px 50px;
     background-color: #f0e5f9;
-}
+    }
 .rightcolumn2 {
     width: 50vw;
     height: 100vh;
-    padding-top: 30px;
     display: grid;
-    grid-template-columns: 90% 10%;
-    grid-template-rows: 500px 500px 100px;
+    row-gap: 25px;
+    grid-template-columns: 800px 120px;
+    grid-template-rows: 400px 400px 50px;
     background-color: #fbedfd;
+    position: relative;
+    z-index: 2;
     }
+.leftcolumn3 {
+    width: 50vw;
+    height: 100vh;
+    background-color: #f0e5f9;
+    font-size: 2.4vw; 
+    text-align: right;
+    }
+.rightcolumn3 {
+    width: 50vw;
+    height: 100vh;
+    background-color: #fbedfd;
+    font-size: 2.4vw; 
+    }
+.text-column3 {
+    margin-top: 25%;
+    width:45vw;
+    text-align: left; 
+    margin-left: 2vw;
+    /*border: 1px solid #4b2aa7;*/
+
+}
+/* labels */
+.label-box {
+    width: 95%; 
+    columns: 130px;
+    margin-top: 20px;
+    /*border: 1px solid #4b2aa7;*/
+}
+.label-box-neg {
+    width: 85%; 
+    columns: 120px;
+    gap: 1px;
+    margin-left: 70px; 
+    margin-top: -93px;
+    /*border: 1px solid #4b2aa7;*/
+}
+.area-label-item {
+    break-inside: avoid;
+    align-items: center;
+    padding-top: 0px;
+    /*border: 1px solid #4b2aa7;*/
+}
+.g-element {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.txt-element {
+    font-size: 18px;
+    line-height: 100%;
+    height: 50px;
+    /*border: 1px solid #4b2aa7;*/
+}
+
 .dataviz {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    position: relative;
+    z-index: 0;
+    }
 .griditem {
     padding: 0;
     margin: 0px;
@@ -212,27 +275,26 @@ body {
     /*border: 1px solid #4b2aa7;*/
     }
 
-
 .datavis_descript {
     width: 37vw;
     text-align: left;
     font-size: 4vh;
     padding: 20% 0% 2% 5%;
-    /*border: 1px solid rgb(255, 0, 255);*/
+    /*border: 1px solid #4b2aa7;*/
     }
 .datavis_descript_2 {
     width: 37vw;
     text-align: left;
     font-size: 4vh;
     padding: 2% 0% 2% 5%;
-    /*border: 1px solid rgb(255, 0, 255);*/
+    /*border: 1px solid #4b2aa7;*/
     }
 .datavis_descript_below {
     text-align: left;
     font-size: 4vh;
     margin-top: -65px;
     padding: 0% 10% 1% 5%;
-    /*border: 1px solid rgb(0, 247, 255);*/
+    /*border: 1px solid #4b2aa7;*/
     }
 .datavis_descript_small {
     text-align: left;
@@ -276,7 +338,7 @@ body {
     left: 0;
 }
 */
-  /* quote design */
+/* quote design */
 .fatigue {
     color: #92a2c3;
     font-style: bold;
@@ -305,38 +367,45 @@ body {
 
 #face-fatigue {
     position: relative;
+    z-index: 10; 
     display: inline-block;
-    top: -380px; left: -120px;
+    top: -260px; left: -148px;
     font-size: 1em;
-    animation: svg-shadow_f 1.5s ease-in-out infinite alternate;
-    z-index: 4; 
+    animation: svg-shadow 1.2s ease-in-out infinite alternate;
+    
+}
+#face-sleep {
+    position: relative;
+    display: inline-block;
+    top: -455px; left: -78px;
+    animation: svg-shadow 1.2s ease-in-out infinite alternate;
+    z-index: 9; 
 }
 #face-headache {
     position: relative;
     display: inline-block;
-    top: -515px; left: 0px;
-    animation: svg-shadow_h 1.5s ease-in-out infinite alternate;
-    z-index: 3; 
+    top: -370px; left: 515px;
+    animation: svg-shadow 1.2s ease-in-out infinite alternate;
+    z-index: 8; 
 }
-
 #face-depress {
-position: relative;
-display: inline-block;
-top: -750%; left: 13%;
-animation: svg-shadow_d 1.5s ease-in-out infinite alternate;
-z-index: 1; 
+    position: relative;
+    display: inline-block;
+    top: -460px; left: 645px;
+    animation: svg-shadow 1.2s ease-in-out infinite alternate;
+    z-index: 7; 
 }
-#face-sleep {
-position: relative;
-display: inline-block;
-top: -730%; left: -20%; 
-animation: svg-shadow_s 1.5s ease-in-out infinite alternate;
-z-index: 2; 
-}
-
-
-
   
+@keyframes svg-shadow {
+    from {
+      filter: drop-shadow( 0 0 0.5px #ffffff) drop-shadow( 0 0 1px #c7b93c) drop-shadow( 0 0 0.5px #ffffff);
+    }
+    
+    to {
+      filter: drop-shadow( 0 0 2px #ffffff) drop-shadow( 0 0 1px #c7b93c) drop-shadow( 0 0 2px #ffffff);
+    }
+  }
+
   @keyframes svg-shadow_f {
     from {
       filter: drop-shadow( 0 0 0px #fff) drop-shadow( 0 0 2px #69f9fc) drop-shadow( 0 0 4px #69f9fc);
@@ -383,14 +452,14 @@ z-index: 2;
     /*height: 430px;*/
     width: 450px;
     background-color: rgb(248, 255, 255);
-    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
+    border: 2px solid #0022ff; /* rgb(93, 241, 252);*/
+    border-radius: 9px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
-    padding: 20px;
+    padding: 25px;
     position: absolute;
+    z-index: 15;
     bottom: 50px;
-    left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
@@ -402,14 +471,14 @@ z-index: 2;
     /*height: 430px;*/
     width: 450px;
     background-color: rgb(248, 255, 255);
-    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
+    border: 2px solid #000; /* rgb(93, 241, 252);*/
+    border-radius: 9px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
-    padding: 20px;
+    padding: 25px;
     position: absolute;
+    z-index: 15;
     bottom: 50px;
-    left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
@@ -422,33 +491,33 @@ z-index: 2;
     width: 450px;
     background-color: rgb(248, 255, 255);
     border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
+    border-radius: 9px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
     position: absolute;
-    padding: 20px;
+    z-index: 15;
+    padding: 25px;
     bottom: 50px;
-    left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
 }
-
 #face-fatigue .tooltipbox {
     visibility: hidden;
     height: flex;
     /*height: 430px;*/
-    width: 450px;
+    width: 460px;
     background-color: rgb(248, 255, 255);
-    border: 2px solid #f79885; /* rgb(93, 241, 252);*/
-    border-radius: 4px;
+    border: 2px solid #92a2c3; /* rgb(93, 241, 252);*/
+    border-radius: 9px;
     /*box-shadow: 20px 15px 30px 15px rgba(0, 0, 0, 0.15);*/
     text-align: left;
     position: absolute;
-    padding: 20px;
+    z-index: 15;
+    padding: 25px;
+    padding-right: 50px;
     bottom: 50px;
-    left: 90%;
     margin-left: 0px;
     /* Fade in tooltip - takes 1.5 second to go from 0% to 100% opac: */
     opacity: 0;
@@ -475,11 +544,12 @@ z-index: 2;
 .quote {
     font-style: italic;
     font-size: 1.35em;
+    padding-left: 10px;
 }
 #seperatershort {
     padding-top: 20px;
 }
-.annotation_all_women{
+.annotation_all_women {
     font-size: 1.7em; 
     margin-top: 60px; 
     margin-left: 1vw; 
@@ -488,26 +558,26 @@ z-index: 2;
 }
 .annotation_side_symptoms {
     font-size: 1.5em; 
-    margin-top: 10px; 
+    margin-top: 55px; 
     margin-left: 1vw; 
-    margin-right: -150px; 
+    margin-right: -10px; 
     text-align: left
 }
 .annotation_side_symptoms_right {
     font-size: 1.5em; 
-    margin-top: 10px; 
-    margin-left: -100px; 
-    margin-right: -0px; 
+    margin-top: 55px; 
+    margin-left: -80px; 
+    margin-right: 2vw; 
     text-align: left
 }
 .annotation_left {
-    width: 30px;
+    width: 160px;
 }
 .annotation_right {
-    width: 75px;
+    width: 160px;
 }
 .acktxt {
-    width: 84vw;
+    width: 60vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -516,18 +586,16 @@ z-index: 2;
     text-align: center;
     font-size: 3.5em;
     margin-top: -30vh;
-    padding: 0vh 15vh 10vh 15vh;
+    margin: auto;
+  
 }
 .acktxt1 {
-    /*padding-top: 90%;*/
-    padding-left: 10%;
-    padding-right: 10%; 
     font-size: 0.8em;
 }
 .acktxt2 {
-    /*padding-bottom: 90%;*/
     font-size: 0.9em; 
 }
+
 
 
 /*
